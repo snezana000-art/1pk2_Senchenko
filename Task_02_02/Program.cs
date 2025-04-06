@@ -1,7 +1,8 @@
 ﻿namespace Task_02_02 { }
 internal class Program {
 
-public class MathCalculations
+
+    public class MathCalculations
 {
     public static void Main(string[] args)
     {
