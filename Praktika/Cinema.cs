@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace Praktika
 {
-
-    
-
     public static class Cinema
     {
         private static List<Movie> movies = new List<Movie>();
