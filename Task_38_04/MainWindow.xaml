@@ -1,0 +1,49 @@
+﻿<!-- MainWindow.xaml -->
+<Window x:Class="StudentRecords.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentRecords"
+        mc:Ignorable="d"
+       Title="Учет студентов" Height="450" Width="600" Closing="Window_Closing">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+            <Label Content="Фамилия:"/>
+            <TextBox x:Name="txtLastName" Margin="0,0,0,10"/>
+
+            <Label Content="Имя:"/>
+            <TextBox x:Name="txtFirstName" Margin="0,0,0,10"/>
+
+            <Label Content="Отчество:"/>
+            <TextBox x:Name="txtMiddleName" Margin="0,0,0,10"/>
+
+            <Label Content="Группа:"/>
+            <TextBox x:Name="txtGroup" Margin="0,0,0,10"/>
+
+            <Label Content="Пол:"/>
+            <ComboBox x:Name="cmbGender" Margin="0,0,0,10">
+                <ComboBoxItem Content="Мужской"/>
+                <ComboBoxItem Content="Женский"/>
+            </ComboBox>
+
+            <Label Content="Дата рождения:"/>
+            <DatePicker x:Name="dpBirthDate" Margin="0,0,0,20"/>
+
+            <Button x:Name="btnSave" Content="Сохранить" Click="btnSave_Click" Height="30"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Label Content="Список студентов:"/>
+            <ListBox x:Name="lstStudents" Height="300" Margin="0,0,0,10"/>
+            <Button x:Name="btnDelete" Content="Удалить выбранного" Click="btnDelete_Click" Height="30"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
+    
